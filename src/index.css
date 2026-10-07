@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-heading: 'Cinzel', 'Playfair Display', serif;
+    --font-body: 'Fredoka', system-ui, -apple-system, sans-serif;
+    --font-reading: 'Newsreader', 'Playfair Display', Georgia, serif;
+  }
+
+  body {
+    font-family: var(--font-body);
+  }
+}
+
+.font-serif-title {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-storybook {
+  font-family: 'Newsreader', 'Playfair Display', Georgia, serif;
+}
+
+.font-heading-royal {
+  font-family: 'Cinzel', serif;
+}
+
+.font-sans-friendly {
+  font-family: 'Fredoka', sans-serif;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(245, 240, 225, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: #d4a373;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #bc6c25;
+}
+
+/* Drop-cap for story reading */
+.drop-cap::first-letter {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.6rem;
+  line-height: 0.85;
+  float: left;
+  margin-top: 0.15rem;
+  margin-right: 0.65rem;
+  font-weight: 700;
+  color: #E63946;
+  text-shadow: 1px 1px 0px rgba(29, 53, 87, 0.15);
+}
+
+/* Printable PDF layout styles */
+@media print {
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .printable-story {
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+  .page-break {
+    page-break-before: always;
+  }
+}

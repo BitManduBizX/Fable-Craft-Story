@@ -1,0 +1,6 @@
+{
+  "name": "FableCraft - Timeless Stories, Magical Moments",
+  "description": "A digital enchanted library bringing together classic children's fairy tales, Aesop & global fables, bedtime stories, nursery rhymes, and AI-powered StoryGenie magic.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
