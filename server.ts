@@ -19,7 +19,10 @@ app.get('/health', (req, res) => {
 
 // Helper to get Gemini client
 function getGenAIClient(clientKey?: string) {
-  const apiKey = clientKey?.trim() || process.env.GEMINI_API_KEY?.trim();
+  const apiKey =
+    clientKey?.trim() ||
+    process.env.GEMINI_API_KEY?.trim() ||
+    process.env.VITE_GEMINI_API_KEY?.trim();
   if (!apiKey || apiKey === 'MY_GEMINI_API_KEY') {
     return null;
   }
